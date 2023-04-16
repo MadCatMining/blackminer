@@ -29,30 +29,30 @@
 
 #define DEVICE_DIFF_STANDARD_MASK       0xFFFFFFFFull
 // something about fan
-#define JSL_FAN_MAX_SPEED	4300
-#define JSL_FAN_WANN_SPEED	4730
+#define JSL_FAN_MAX_SPEED	2800
+#define JSL_FAN_WANN_SPEED	3000
 #define JSL_MIN_PWM_PERCENT	25
-#define JSL_MAX_PWM_PERCENT	70
+#define JSL_MAX_PWM_PERCENT	100
 
 
 #define BITMAIN_MAX_FAN_NUM             2
 #define PWM_PERIOD_NS                   100000
 #define MIN_FAN_NUM                     1
 #if defined(USE_BLACKMINER_F1_MINI)
-#define FAN_WANN_SPEED                  1500
-#define FAN1_MAX_SPEED                  1500
-#define FAN2_MAX_SPEED                  1500
+#define FAN_WANN_SPEED                  1200
+#define FAN1_MAX_SPEED                  1000
+#define FAN2_MAX_SPEED                  1000
 #else
 #define FAN_WANN_SPEED                  JSL_FAN_WANN_SPEED
 #define FAN1_MAX_SPEED                  JSL_FAN_MAX_SPEED
-#define FAN2_MAX_SPEED                  3600
+#define FAN2_MAX_SPEED                  2800
 #endif
 #define FAN_SPEED_OK_PERCENT            (0.85)
 #define MIN_PWM_PERCENT                 JSL_MIN_PWM_PERCENT
 #define MAX_PWM_PERCENT                 JSL_MAX_PWM_PERCENT
 #define TEMP_INTERVAL                   2
 #define MAX_TEMP                       80 //82
-#define MAX_FAN_TEMP               65    // 80
+#define MAX_FAN_TEMP               75    // 80
 #define MIN_FAN_TEMP                45    //30
 #define PWM_ADJUST_FACTOR               ((MAX_PWM_PERCENT - MIN_PWM_PERCENT)/(MAX_FAN_TEMP - MIN_FAN_TEMP))
 #define FANINT                          1
